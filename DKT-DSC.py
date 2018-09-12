@@ -482,12 +482,13 @@ def read_data_from_csv_file(fileName, shuffle=False):
              
     #print (studentid)           
     #print(studentid)
-    max_skills =max_skills+2
-    max_steps  =max_steps+1
+    
     print ("the number of skills is " + str(max_skills))
     print ("the Problem_steps in original is " + str(max_steps))
     print ("the Problem_steps after processing is " + str(problem_len)) 
     print ("Finish reading data")
+    max_skills =max_skills+2
+    max_steps  =max_steps+1
     return tuple_rows, studentids, max_skills 
 
 
