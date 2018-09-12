@@ -3,7 +3,7 @@
 ## Data Format
 
 #### First Line: num of attempts, student id
-#### Second Line: sequnce of skill
+#### Second Line: sequnce of skills
 #### Third Line: sequence of responses
 ```
     13,5
