@@ -1,14 +1,3 @@
-# The code is rewritten based on source code from tensorflow tutorial for Recurrent Neural Network.
-# https://www.tensorflow.org/versions/0.6.0/tutorials/recurrent/index.html
-# You can get source code for the tutorial from
-# https://github.com/tensorflow/tensorflow/blob/master/tensorflow/models/rnn/ptb/ptb_word_lm.py
-#
-# There is dropout on each hidden layer to prevent the model from overfitting
-#
-# Here is an useful practical guide for training dropout networks
-# https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf
-# You can find the practical guide on Appendix A
-
 import csv
 import os
 
