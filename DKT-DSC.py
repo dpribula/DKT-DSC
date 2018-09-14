@@ -389,7 +389,7 @@ def run_epoch(session, m, students, cluster, eval_op, verbose=False):
     return rmse, auc, r2, np.concatenate(all_all_logits)
 
 
-def read_data_from_csv_file(fileName, shuffle=False):
+def read_data_from_csv_file(fileName):
     config = HyperParamsConfig()
     rows = []
     max_skills = 0
@@ -494,8 +494,8 @@ def read_data_from_csv_file(fileName, shuffle=False):
 def main(unused_args):
     config = HyperParamsConfig()
     
-    train_students, train_ids, train_max_skills = read_data_from_csv_file(FLAGS.train_data_path, shuffle=True)
-    test_students, test_ids, test_max_skills = read_data_from_csv_file(FLAGS.test_data_path, shuffle=True)    
+    train_students, train_ids, train_max_skills = read_data_from_csv_file(FLAGS.train_data_path)
+    test_students, test_ids, test_max_skills = read_data_from_csv_file(FLAGS.test_data_path)    
     max_skills=max([int(train_max_skills),int(test_max_skills)])+1    
     config.num_skills = max_skills 
     train_cluster_data, train_max_seg= cluster_data(train_students,max(train_ids)+1,max_skills)
