@@ -310,7 +310,7 @@ def get_steps(config,train_students, test_students, cluster):
                    if(t_id>max_t_indx):
                       max_t_indx = t_id                               
         index += config.batch_size        
-    num_steps = (max_index // (config.num_skills * config.batch_size))+1
+    num_steps = (max_t_indx // (config.num_skills * config.batch_size))+1
     if (num_steps<config.num_steps):
        num_steps=config.num_steps
     return num_steps
