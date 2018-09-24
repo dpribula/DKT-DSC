@@ -349,12 +349,13 @@ def read_data_from_csv_file(path):
                         if(len(q_container)>problem_len):
                            q_container= [] 
                            a_container=[] 
-                    s1=[stu_id,k]
-                    tuple_data=(s1,q_container,a_container)                     
-                    students.append(tuple_data)
-                    tmp_max_skills = max(q_container)   
-                    if(tmp_max_skills > max_skills):
-                       max_skills = tmp_max_skills
+                    if len(q_container)>0:
+                       s1=[stu_id,k]
+                       tuple_data=(s1,q_container,a_container)
+                       students.append(tuple_data)
+                       tmp_max_skills = max(q_container)
+                       if(tmp_max_skills > max_skills):
+                          max_skills = tmp_max_skills
                     
     f_data.close()   
     
