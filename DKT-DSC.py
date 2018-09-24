@@ -95,8 +95,7 @@ class StudentModel(object):
         sigmoid_w = tf.get_variable("sigmoid_w", [final_hidden_size, output_size])
         sigmoid_b = tf.get_variable("sigmoid_b", [output_size])
         logits = tf.matmul(output, sigmoid_w) + sigmoid_b
-        logits = tf.reshape(logits, [-1])
-        print("==> [Tensor Shape] output \t",logits.get_shape())           
+        logits = tf.reshape(logits, [-1])                 
         selected_logits = tf.gather(logits, self.target_id)
         self._all_logits = logits
 
